@@ -26,7 +26,7 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname + '/views/'))); 
 
 app.get('/', (req, res) => {
-    res.redirect('/home.html')
+    res.sendFile(path.join(__dirname, "/views/home.html"))
 })
     
 
