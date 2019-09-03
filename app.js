@@ -5,7 +5,6 @@ const knex = require('./knex/knex.js');
 const exphbs  = require('express-handlebars');
 const passportSetup = require('./config/passport-setup'); 
 const cookieSession = require('cookie-session'); 
-const keys = require('./config/keys')
 const passport = require('passport'); 
 
 const PORT = process.env.PORT || 3000; 
@@ -16,7 +15,7 @@ app.set('view engine', 'handlebars');
 //use cookie encoder
 app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
-    keys: [keys.session.cookieKey]
+    keys: [process.env.cookieKey]
 })); 
 
 //init passport 

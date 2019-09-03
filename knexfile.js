@@ -1,5 +1,4 @@
 // Update with your config settings.
-const keys = require('./config/keys'); 
 module.exports = {
 
   development: {
@@ -7,7 +6,7 @@ module.exports = {
     connection: {
       host : '127.0.0.1',
       user : 'root',
-      password : keys.db.password,
+      password : process.env.DB_PASSWORD,
       database : 'schedules',
       charset: 'utf8'
     }, 

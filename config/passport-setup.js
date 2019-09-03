@@ -1,6 +1,5 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
-const keys = require('./keys');
 const knex = require('../knex/knex');
 const __ = require('lodash')
 
@@ -27,8 +26,8 @@ passport.use(
     new GoogleStrategy({
         //Google strategy options 
         callbackURL: '/auth/google/redirect',
-        clientID: keys.google.clientID,
-        clientSecret: keys.google.clientSecret
+        clientID: process.env.myClientID,
+        clientSecret: process.env.myClientSecret
     }, (accessToken, refreshToken, profile, done) => {
         //strategy callback 
         console.log('strategy started')
