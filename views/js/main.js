@@ -5,3 +5,10 @@ $('#displayUser').on('click', () => {
         alert(`Welcome, your user ID is ${userID}`)
     })
 })
+
+$('#logout').on('click', () => {
+    console.log('logged out')
+    $.get('http://localhost:3000/auth/logout', () => {
+        alert('logged out')
+    })
+})

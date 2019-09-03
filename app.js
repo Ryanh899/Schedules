@@ -6,6 +6,8 @@ const exphbs  = require('express-handlebars');
 const passportSetup = require('./config/passport-setup'); 
 const cookieSession = require('cookie-session'); 
 const passport = require('passport'); 
+require('dotenv').config();
+const keys = require('./config/config');
 
 const PORT = process.env.PORT || 3000; 
 //view engine
@@ -15,7 +17,7 @@ app.set('view engine', 'handlebars');
 //use cookie encoder
 app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
-    keys: [process.env.cookieKey]
+    keys: [keys.cookieKey]
 })); 
 
 //init passport 

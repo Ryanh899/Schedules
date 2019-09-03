@@ -2,6 +2,9 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
 const knex = require('../knex/knex');
 const __ = require('lodash')
+require('dotenv').config();
+const keys = require('./config'); 
+
 
 //passport serialize user function
 passport.serializeUser((user, done) => {
@@ -26,8 +29,8 @@ passport.use(
     new GoogleStrategy({
         //Google strategy options 
         callbackURL: '/auth/google/redirect',
-        clientID: process.env.myClientID,
-        clientSecret: process.env.myClientSecret
+        clientID: keys.clientID,
+        clientSecret: keys.clientSecret
     }, (accessToken, refreshToken, profile, done) => {
         //strategy callback 
         console.log('strategy started')
