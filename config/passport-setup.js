@@ -34,6 +34,7 @@ passport.use(
     }, (accessToken, refreshToken, profile, done) => {
         //strategy callback 
         console.log('strategy started')
+        console.log(profile)
         let data = __.pick(profile, 'displayName', 'id', 'name')
         console.log('data: ' + data)
         return new Promise((resolve, reject) => {

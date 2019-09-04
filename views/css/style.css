@@ -1,0 +1,36 @@
+.jumbo {
+    background: #FFB72B; 
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 100%
+}
+
+.container-fluid {
+    width:100%; 
+    padding:70px 0px 70px 0px;
+    height: 100%; 
+    overflow: hidden;
+    }
+
+#months {
+    background: #3567D1;
+    font-family: 'Roboto', sans-serif;
+}
+#employees {
+    background: #3567D1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navb {
+    background: #3567D1; 
+    color: white; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.userFade {
+    border-color: #72E2DE
+}
+
+
+
+
