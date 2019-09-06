@@ -9,18 +9,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/5f4ec7175b.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Schedule</h1>
-          <p class="lead">Welcome to the scheduling app</p>
-          <a href="/auth/google" ><button>Log in with google</button></a>
-        </div>
-      </div>
 
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navb mb-0 pl-2 pb-1 pt-1">
+        <a class="navbar-brand ml-0 mt-0 mb-0" id="username" style="color: white; font-size: 25px" href="">Schedule</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a href="/auth/google"><button class="btn p-1 ml-2" style="background: white; color: grey" id="logout"><i
+                        class="fab fa-google-plus-g"></i> Sign in with Google+</button></a>
+        </div>
+    </nav>
+    <div class="bg">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
